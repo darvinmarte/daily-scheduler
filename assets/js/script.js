@@ -4,12 +4,12 @@
 
 // TODO: Add code to display the current date in the header of the page.
 // added current date and time to header
-$(function start() {
+function start() {
     setInterval(function () {
         const currentTime = dayjs().format("MMMM-DD-YYYY hh:mm:ss A");
         $("#currentDay").text(currentTime);
     }, 1000);
-});
+};
 start();
 
 
@@ -20,29 +20,30 @@ start();
     // time-block containing the button that was clicked? How might the id be
     // useful when saving the description in local storage?
     $(".btn").on('click', function() {
-        $('#description').html();
-        localStorage.content = $('#description').html();
-        $('#description').html(localStorage.content);
+    
     
     });
 //
 
 // TODO: Add code to apply the past, present, or future class to each time
-const currentTime = dayjs().format("HH");
+const currentHour = parseInt(dayjs().format("HH"));
+console.log(currentHour)
+
 $('.time-block').each(function() {
 
-    var timeBlock = $(this).attr("id").val();
+    var timeBlock = parseInt($(this).attr("id").split('-')[1]);
+    console.log(timeBlock)
 
-    if (currentTime === timeBlock) {
-        timeBlock.addClass("present");
+    if (currentHour === timeBlock) {
+        $(this).addClass("present");
 
-    } else if (currentTime < timeBlock) {
-        timeBlock.removeClass("present");
-        timeBlock.addClass("future");
+    } else if (currentHour < timeBlock) {
+        // timeBlock.removeClass("present");
+        $(this).addClass("future");
 
-    } else if (currentTime > timeBlock) {
-        timeBlock.removeClass("future");
-        timeBlock.addClass("past");
+    } else if (currentHour > timeBlock) {
+        // timeBlock.removeClass("future");
+        $(this).addClass("past");
     };
 });
 // block by comparing the id to the current hour. HINTS: How can the id
