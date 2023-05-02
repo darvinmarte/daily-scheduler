@@ -18,7 +18,7 @@ N/A
 https://darvinmarte.github.io/daily-scheduler/
 
 
-![](./assets/images/screencapture-127-0-0-1-5500-index-html-2023-05-01-22_02_23.png)
+![](./assets/images/screencapture-darvinmarte-github-io-daily-scheduler-2023-05-02-15_41_28.png)
 ## Credits
 
 N/A
