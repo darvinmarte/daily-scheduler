@@ -17,7 +17,7 @@ N/A
 - This is the link to the deployed website
 
 
-![]()
+![](./assets/images/screencapture-127-0-0-1-5500-index-html-2023-05-01-22_02_23.png)
 ## Credits
 
 N/A
