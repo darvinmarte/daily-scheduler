@@ -34,11 +34,12 @@ $('.time-block').each(function() {
     // function? How can DOM traversal be used to get the "hour-x" id of the
     // time-block containing the button that was clicked? How might the id be
     // useful when saving the description in local storage?
-    $(".btn").on('click', function() {
+
+
+//     $(".btn").on('click', function() {
     
-    
-    });
-//
+//     });
+// //
 
 
 // TODO: Add code to get any user input that was saved in localStorage and set
@@ -47,10 +48,21 @@ $('.time-block').each(function() {
 //
 // The javascript will need to do this by adding/removing these classes on each div by comparing the hour in the id to the current hour.
 // get the text
-// $(".saveBtn").click(function () {
-//     var text = $(".description").text().value;
+$(".saveBtn").on('click',function () {
+    var description = $(this).siblings('.description').val()
+    var timeB = $(this).parent().attr('id')
 
-//     localStorage.setItem("", text);
+    localStorage.setItem(timeB, description);
 
-// });
+});
 
+
+$('#hour-9 .description').val(localStorage.getItem("hour-9"))
+$('#hour-10 .description').val(localStorage.getItem("hour-10"))
+$('#hour-11 .description').val(localStorage.getItem("hour-11"))
+$('#hour-12 .description').val(localStorage.getItem("hour-12"))
+$('#hour-13 .description').val(localStorage.getItem("hour-13"))
+$('#hour-14 .description').val(localStorage.getItem("hour-14"))
+$('#hour-15 .description').val(localStorage.getItem("hour-15"))
+$('#hour-16 .description').val(localStorage.getItem("hour-16"))
+$('#hour-17 .description').val(localStorage.getItem("hour-17"))
